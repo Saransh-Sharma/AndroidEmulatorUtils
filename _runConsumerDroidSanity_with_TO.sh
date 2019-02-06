@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+cd $CA
+git fetch
+sleep 15s
+git checkout espresso-refector-onboarding
+sleep 2s
+
+cd $TO
+git fetch
+sleep 15s
+git checkout ca_config
+sleep 2s
+
 echo "** KILLING EXISTING EMULATORS **"
 sh _emulator-kill-all.sh &
 sleep 5s
